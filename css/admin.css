@@ -1,0 +1,155 @@
+.wp-heading-inline {
+	width: 100%;
+}
+
+.admin-section {
+	background: #fff;
+	padding: 1px 20px 20px;
+	border-radius: 3px;
+	margin: 20px 0.5% 0;
+	display: inline-block;
+	vertical-align: top;
+	width: 32.33%;
+	box-sizing: border-box;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	transition: all 0.3s ease-in-out;
+}
+
+.admin-section:first-of-type {
+	margin-left: 0;
+}
+
+.admin-section:nth-of-type(3n) {
+	margin-right: 0;
+}
+
+.admin-section label {
+	display: inline-block;
+	margin: 10px 0 2px;
+}
+
+.admin-section select,
+.admin-section input {
+	display: inline-block;
+	width: 31%;
+	vertical-align: top;
+}
+
+.admin-section .input-note {
+	display: inline-block;
+	width: 65%;
+	color: #999;
+	margin-left: 5px;
+	line-height: 1em;
+}
+
+.admin-section-title {
+	width: 100%;
+	border-bottom: 1px solid #eee;
+}
+
+.admin-section h4 {
+	margin: 14.5px 0;
+}
+
+#product-categories {
+	display: none;
+}
+
+#shortcode-output {
+	width: 84%;
+	display: inline-block;
+}
+
+#copy-shortcode {
+	display: inline-block;
+	padding: 3px 2px 2px 2.5px;
+	vertical-align: top;
+	position: relative;
+	top: 1px;
+	left: -1px;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	background: #fff;
+	color: #333;
+	transition: all 0.3s;
+	border-left: none;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+#copy-shortcode:hover {
+	background: #333;
+	color: #fff;
+}
+
+#copy-shortcode:focus {
+	outline: none;
+}
+
+#shortcode-copied {
+	background: rgba(255,255,255,0.8);
+	position: absolute;
+	display: none;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 5px 0;
+}
+
+/* style preview post */
+.postswiper-wrapper {
+	height: auto !important;
+}
+
+.postswiper-post {
+	height: auto !important;
+	width: auto !important;
+	display: block !important;
+	float: none !important;
+	position: inherit !important;
+	left: auto !important;
+	right: auto !important;
+	margin: 20px 0 1px !important;
+	cursor: default !important;
+	transition: all 0.5s;
+}
+
+.postswiper-post a {
+	text-decoration: none;
+}
+
+.postswiper-post a:active, .postswiper-post a:focus {
+	outline: none;
+}
+
+.postswiper-post .dashicons {
+	margin-top: 0 !important;
+}
+
+.postswiper-postcats .dashicons {
+	margin-right: 5px;
+}
+
+/* responsive */
+@media screen and (max-width: 1919px) {
+	.admin-section {
+		width: 48%;
+		margin: 10px 1%;
+	}
+	.admin-section:last-of-type {
+		margin: 20px 0 0;
+		width: 98%;
+	}
+}
+@media screen and (max-width: 1340px) {
+	.admin-section, .admin-section:last-of-type {
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+@media screen and (max-width: 782px) {
+	#copy-shortcode {
+		padding: 6.5px;
+	}
+}

@@ -1,0 +1,257 @@
+.postswiper-wrapper {
+	position: relative;
+	height: 355px;
+	display: block;
+	user-select: none;
+	width: 100%;
+	margin: auto;
+	max-width: 500px;
+	text-align: center;
+}
+
+.postswiper-wrapper > p {
+	padding-top: 60px;
+	font-size: 1.2em;
+	transition: all 0.5s linear 0.5s;
+}
+
+.postswiper-wrapper > p .dashicons {
+	font-size: 1.6em;
+}
+
+.postswiper-post {
+	position: absolute;
+	top: 0;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	background: #fff;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+	padding: 14px 20px;
+	cursor: grab;
+	margin: 0;
+	width: 100%;
+	text-align: left;
+	user-select: none;
+}
+
+.postswiper-post:first-of-type {
+	display: block;
+}
+
+.postswiper-postheader {
+	position: relative;
+}
+
+.postswiper-posttitle {
+	font-size: 1.2em;
+	font-weight: normal;
+	display: inline-block;
+	margin-bottom: 0;
+	margin-top: -3px;
+}
+
+.postswiper-posttitle a {
+	font-weight: bold;
+	margin-right: 150px;
+}
+
+.postswiper-postdate, .postswiper-productprice {
+	margin-left: 20px;
+	color: #666;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.postswiper-productprice del {
+	margin-right: 5px;
+	opacity: 0.7;
+}
+
+.postswiper-postdate .dashicons {
+	margin-right: 5px;
+	margin-top: 2px;
+}
+
+.postswiper-postinfo {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 10px 0;
+	margin: 10px 0;
+}
+
+.postswiper-featuredimg {
+	height: 100px;
+	width: 100px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	background-position: center;
+	background-size: cover;
+	float: right;
+}
+
+.postswiper-postcats {
+	margin-top: 5px;
+}
+
+.postswiper-cat-link {
+	margin-right: 10px;
+}
+
+.postswiper-cat-link .dashicons {
+	margin-top: 2px;
+	margin-right: 3px;
+}
+
+.rot-left {
+	transform: rotate(-30deg) scale(0.8);
+	transition: margin-left 1s, transform 1s, opacity 1s ease-in-out 0.5s;
+	opacity: 0;
+	margin-left: 500px;
+	z-index: 10;
+	cursor: default;
+}
+
+.rot-right {
+	transform: rotate(30deg) scale(0.8);
+	transition: margin-left 1s, transform 1s, opacity 1s ease-in-out 0.5s;
+	opacity: 0;
+	margin-left: -500px;
+	z-index: 10;
+	cursor: default;
+}
+
+.status {
+	position: absolute;
+	top: 5px;
+	background: #fff;
+	border: 3px solid #fff;
+	border-radius: 5px;
+	padding: 6px 10px;
+}
+
+.status.like {
+	border-color: #090;
+	color: #090;
+	right: 5px;
+	font-weight: bold;
+}
+
+.status.dislike {
+	border-color: #900;
+	color: #900;
+	left: 5px;
+	font-weight: bold;
+}
+
+.postswiper-likedlist-wrapper {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.postswiper-likedlist-wrapper .dashicons {
+	margin-top: 2px;
+	margin-right: 5px;
+}
+
+.postswiper-likedlist-opener {
+	outline: none !important;
+}
+
+.postswiper-likedlist-opener.disabled {
+	cursor: default;
+	color: #999;
+}
+
+.postswiper-likedlist-opener::after {
+	content: "\f139";
+	font-family: dashicons;
+	font-size: 1.5em;
+	vertical-align: text-top;
+	position: relative;
+	top: -8px;
+}
+
+.postswiper-likedlist-opener.toggle-open::after {
+	content: "\f140";
+	top: -9px;
+	left: -1px;
+}
+
+.postswiper-likedlist-list {
+	display: none;
+	width: 100%;
+	max-width: 450px;
+	margin: 15px auto 0;
+	border: 1px solid #ddd;
+	background: #f9f9f9;
+	border-radius: 5px;
+}
+
+.postswiper-likedlist-liked {
+	border-bottom: 1px solid #ddd;
+	padding: 5px 0;
+	transition: 0.3s;
+}
+
+.postswiper-likedlist-liked:hover {
+	background: #fff;
+}
+
+.postswiper-likedlist-liked:last-of-type {
+	border: none;
+}
+
+/* STYLES */
+
+/* dark */
+.postswiper-wrapper.dark .postswiper-post {
+	background: #222;
+	color: #fff;
+	border: 1px solid #111;
+}
+.postswiper-wrapper.dark .postswiper-post .postswiper-postdate, .postswiper-wrapper.dark .postswiper-post .postswiper-productprice {
+	color: rgba(255,255,255,0.7);
+}
+.postswiper-likedlist-wrapper.dark .postswiper-likedlist-list {
+	background: #222;
+	color: #fff;
+	border-color: #111;
+}
+.postswiper-likedlist-wrapper.dark .postswiper-likedlist-list .postswiper-likedlist-liked:hover {
+	background: #444;
+}
+
+/* steel */
+.postswiper-wrapper.steel .postswiper-post {
+	background-color: #ccc;
+	background-image: linear-gradient(90deg, rgba(255,255,255,0.01) 50%, transparent 50%),
+	linear-gradient(90deg, rgba(255,255,255,.01) 50%, transparent 50%),
+	linear-gradient(90deg, transparent 50%, rgba(255,255,255,0.01) 50%),
+	linear-gradient(90deg, transparent 50%, rgba(255,255,255,0.01) 50%);
+	background-size: 13px, 29px, 37px, 53px;
+	color: #333;
+	border: 1px solid #ccc;
+}
+.postswiper-wrapper.steel .postswiper-post .postswiper-postdate, .postswiper-wrapper.steel .postswiper-post .postswiper-productprice {
+	color: #666;
+}
+.postswiper-wrapper.steel .postswiper-postinfo {
+	border-color: #bbb;
+}
+.postswiper-likedlist-wrapper.steel .postswiper-likedlist-list {
+	background-color: #ccc;
+	background-image: linear-gradient(90deg, rgba(255,255,255,0.01) 50%, transparent 50%),
+	linear-gradient(90deg, rgba(255,255,255,.01) 50%, transparent 50%),
+	linear-gradient(90deg, transparent 50%, rgba(255,255,255,0.01) 50%),
+	linear-gradient(90deg, transparent 50%, rgba(255,255,255,0.01) 50%);
+	background-size: 13px, 29px, 37px, 53px;
+	color: #222;
+	border-color: #ccc;
+}
+.postswiper-likedlist-wrapper.steel .postswiper-likedlist-list .postswiper-likedlist-liked {
+	border-color: #ccc;
+}
+.postswiper-likedlist-wrapper.steel .postswiper-likedlist-list .postswiper-likedlist-liked:hover {
+	background: #eee;
+}
